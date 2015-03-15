@@ -1,0 +1,17 @@
+#!/bin/sh
+echo "$PATH"
+if [ -f "/Library/Frameworks/bpc.framework/TurboActivate.dat" ]
+then
+	echo "TurboActivate.data exists"
+else
+	echo "TurboActivate.data doesn't exist"
+fi
+
+if [ -d "/Library/Frameworks/Mono.framework/Versions" ]
+then
+	echo "Mono is installed"
+	exit 0
+else
+	echo "Mono is not installed"
+	exit 1
+fi
